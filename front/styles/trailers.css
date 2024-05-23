@@ -1,0 +1,75 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    background: url(https://www.desktopbackground.org/download/o/2013/05/30/584198_fondos-de-pantalla-cine-todos-los-wallpapers-cine_1920x1080_h.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 30px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+    font-size: 1rem;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+nav ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 30px;
+  }
+  
+  .logos a {
+    margin-left: 10px;
+  }
+  
+  .logos img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain
+  }
+
+h1 {
+    font-family: 'Barlow Condensed', sans-serif; /* Fuente similar a la de la imagen */
+    font-size: 3em;
+    color: #ffffff; 
+    text-shadow: 2px 2px 4px rgba(255, 240, 103, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 1); 
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    bottom: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
