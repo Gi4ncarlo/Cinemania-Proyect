@@ -1,6 +1,7 @@
-console.log(tempData);
 
-function showMovies(tempData) {
+let peliculas = [];
+
+function showMovies(peli) {
   const articlePelicula = document.createElement("article");
   articlePelicula.classList.add("tarjeta");
 
@@ -19,7 +20,7 @@ function showMovies(tempData) {
 
   const contenedor = document.querySelector(".peliculas");
 
-  const { title, year, director, duration, genre, rate, poster } = tempData;
+  const { title, year, director, duration, genre, rate, poster } = peli;
 
   titleHeading.innerHTML = title;
   anio.innerHTML = `<strong>Año :</strong> ${year}`;
@@ -47,7 +48,20 @@ function showMovies(tempData) {
 }
 
 function init(){
-  tempData.map((peli) => showMovies(peli));
+  peliculas.map((peli) => showMovies(peli));
+  console.log("las peliculas son : ", peliculas);
 };
 
-init()
+
+const addMovie = () => {
+  $.get("https://students-api.up.railway.app/movies",(data, status) =>{
+    peliculas = data;
+    console.log("Las pelis son : ", peliculas);
+  })
+}
+
+addMovie();
+
+setTimeout(() => {
+  init()
+}, 1500);
