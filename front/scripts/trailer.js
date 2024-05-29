@@ -28,14 +28,14 @@ const addMovie = () => {
         console.log(peli);
         let container = document.querySelector(".trailer-container");
         let div = document.createElement("div");
-        div.classList.add("trailer");
+        div.classList.add("col-md-5", "trailer");
 
         let h2 = document.createElement("h2");
         h2.textContent = titulo;
 
         let iframe = document.createElement("iframe");
         iframe.src = link;
-        iframe.width = "560";
+        iframe.width = "100%";
         iframe.height = "315";
         iframe.allow = "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
         iframe.allowFullscreen = true;

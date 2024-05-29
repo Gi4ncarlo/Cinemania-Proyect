@@ -148,15 +148,19 @@ main {
 }
 
 .tarjeta:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    padding-bottom: 10px;
     transition: 0.7s;
      .tarjeta-titulo, .tarjeta-genero{
         white-space: normal;
     } 
+    .tarjeta-titulo{
+        font-size : 16px
+    }
     .tarjeta-info{
-        font-size: 10px;
+        font-size: 8px;
     }
 }
 
