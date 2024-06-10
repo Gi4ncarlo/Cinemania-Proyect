@@ -1,3 +1,4 @@
+
 const pelisExtra = require("./tempData.js");
 
 const contenedor = document.querySelector(".peliculas");
@@ -93,5 +94,6 @@ const showMovies = (data) => {
       contenedor.appendChild(articlePelicula);
     });
   }
+    
 
 module.exports = showMovies;
