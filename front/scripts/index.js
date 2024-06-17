@@ -10,7 +10,7 @@ const showMovies = require("./showMovies.js");
  // USANDO PROMESAS CON ASYNC Y AWAIT
   const fetchData = async () => {
     try {
-      const data = await axios("https://students-api.up.railway.app/movies");
+      const data = await axios("http://localhost:3000/movies");
       showMovies(data.data);
     } catch (error) {
       console.log(" El error es el siguiente : ", error);
