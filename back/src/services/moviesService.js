@@ -1,6 +1,6 @@
-const axios = require("axios");
+//const axios = require("axios");
 
-class Movie {
+/*class Movie {
   constructor(title, year, director, duration, genre, rate, poster) {
     if (!title || title.length < 0) {
       throw new Error("Titulo incorrecto");
@@ -29,7 +29,7 @@ module.exports = {
 
   getallPosters: async () => {
       try {
-        const data = await axios.get("https://students-api.up.railway.app/movies");
+        const data = await axios.get("https://students-api.up.railway.app/movi");
         console.log("las peliculas son : ", data.data);
         return data.data;
       } catch (error) {
@@ -58,3 +58,21 @@ module.exports = {
       }
     }
 };
+*/
+
+
+const Movies = require("../models/Movies");
+
+module.exports = {
+  getMovies : async () => {
+    const movies = await Movies.find();
+
+    return movies;
+  },
+
+  createMovie : async (movieData) => {
+    const movie = new Movies(movieData);
+    const savedMovie = await movie.save();
+    return savedMovie;
+  }
+}

@@ -1,3 +1,4 @@
+/*
 const peliculasExtra = [
   {
     title: "Godzilla y Kong: El nuevo imperio",
@@ -39,3 +40,5 @@ const peliculasExtra = [
 ];
 
 module.exports = peliculasExtra;
+
+*/

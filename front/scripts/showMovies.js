@@ -1,5 +1,5 @@
 
-const pelisExtra = require("./tempData.js");
+//const pelisExtra = require("./tempData.js");
 
 const contenedor = document.querySelector(".peliculas");
 
@@ -47,9 +47,10 @@ const showMovies = (data) => {
     
       contenedor.appendChild(articlePelicula);
     });
-    showExtra(pelisExtra);
+    //showExtra(pelisExtra);
   }
 
+  /*
   const showExtra = (pelisExtra) => {
     pelisExtra.forEach((peli) => {
       const articlePelicula = document.createElement("article");
@@ -94,6 +95,6 @@ const showMovies = (data) => {
       contenedor.appendChild(articlePelicula);
     });
   }
-    
+    */
 
 module.exports = showMovies;
