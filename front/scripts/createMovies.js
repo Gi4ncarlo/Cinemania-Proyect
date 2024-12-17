@@ -24,7 +24,7 @@
 
    try {
   
-    const response = await axios.post('http://localhost:3000/movies/createMovie', movie);
+    const response = await axios.post(`${process.env.PORT}/movies/createMovie`, movie);
 
     console.log(response.data); 
 

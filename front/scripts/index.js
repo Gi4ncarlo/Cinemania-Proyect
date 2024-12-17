@@ -9,9 +9,11 @@ const showMovies = require("./showMovies.js");
   
   
   // USANDO PROMESAS CON ASYNC Y AWAIT
+
+
   const fetchData = async () => {
     try {
-      const data = await axios("http://localhost:3000/movies");
+      const data = await axios(`${process.env.PORT}/movies`);
       showMovies(data.data);
     } catch (error) {
       console.log(" El error es el siguiente : ", error);
