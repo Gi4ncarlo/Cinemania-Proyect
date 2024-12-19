@@ -1,9 +1,10 @@
-module.exports = {
-    mode: 'production',
-    entry: './scripts/index.js',
-    output: {
-      filename: 'bundle.js',
-      path: path.resolve(__dirname, 'dist'),
+module.exports = { 
+    entry : "./scripts/index.js",
+
+    output : { 
+        path : __dirname + "/public",
+        filename : "bundle.js"
     },
-  };
-  
+    mode : "development",
+    watch : true
+}
