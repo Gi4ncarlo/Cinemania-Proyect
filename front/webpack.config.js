@@ -1,10 +1,10 @@
-module.exports = { 
-    entry : "./scripts/index.js",
+const path = require("path");
 
-    output : { 
-        path : __dirname + "/public",
-        filename : "bundle.js"
-    },
-    mode : "development",
-    watch : true
-}
+module.exports = {
+  entry: "./scripts/index.js",
+  output: {
+    path: path.resolve(__dirname, "public"), // Usa path.resolve para mayor compatibilidad
+    filename: "bundle.js",
+  },
+  mode: "production", // Cambia a 'production'
+};

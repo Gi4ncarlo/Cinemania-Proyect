@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "start": "node server.js",
-  "build": "webpack"
+  "build": "webpack", 
+  "start": "live-server public" 
   },
   "keywords": [],
   "author": "",
