@@ -97,4 +97,4 @@ const showMovies = (data) => {
   }
     */
 
-module.exports = showMovies;
+  export default showMovies;
