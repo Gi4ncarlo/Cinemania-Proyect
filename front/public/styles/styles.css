@@ -54,6 +54,12 @@ nav{
     object-fit: contain
   }
 
+  .logos img:hover{
+
+    transform: scale(1.1);
+    transition: 0.6s;
+  }
+
 h1 {
     font-family: 'Barlow Condensed', sans-serif; /* Fuente similar a la de la imagen */
     font-size: 5em;

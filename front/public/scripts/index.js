@@ -9,32 +9,29 @@
   // USANDO PROMESAS CON ASYNC Y AWAIT
 
 
-  import showMovies  from "./showMovies.js";
+// index.js (Frontend)
+import showMovies from "./showMovies.js";
 
+// Usar la variable de entorno expuesta por Vite
+//const apiUrl = import.meta.env.VITE_API_URL;
 
-  const apiUrl = import.meta.env.PORT || "http://localhost:3000";
-  
-  const fetchData = async () => {
-    try {
-      const response = await fetch(`${apiUrl}/movies`);
-  
-      if (!response.ok) {
-        throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
-      }
-  
-      const data = await response.json(); // Parsea la respuesta a JSON
-      showMovies(data);
-    } catch (error) {
-      console.error("El error es el siguiente:", error);
+const fetchData = async () => {
+  try {
+    const response = await fetch(`https://cinemania-proyect-back.vercel.app/movies`);
+
+    if (!response.ok) {
+      throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
     }
-  };
-  
-  fetchData();
-  
-  
-  
-  
-  
+
+    const data = await response.json(); // Parsea la respuesta a JSON
+    showMovies(data);
+  } catch (error) {
+    console.error("El error es el siguiente:", error);
+  }
+};
+
+fetchData();
+
   // USANDO PROMESAS CON THEN Y CATCH  
   /*
   const promise = axios("https://students-api.up.railway.app/movies");
