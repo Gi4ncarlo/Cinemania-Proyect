@@ -17,7 +17,7 @@ import showMovies from "./showMovies.js";
 
 const fetchData = async () => {
   try {
-    const response = await fetch(`https://cinemania-proyect-back.vercel.app/movies`);
+    const response = await fetch(`https://cinemania-proyect.onrender.com/movies`);
 
     if (!response.ok) {
       throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
