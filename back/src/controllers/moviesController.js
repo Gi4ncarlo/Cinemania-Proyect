@@ -4,22 +4,22 @@ const Movies = require("../models/Movies");
 
 module.exports = {
   getallMovies: async (req, res) => {
+    console.log("Fetching movies...");
     try {
       const movies = await getMovies();
-
+      console.log("Movies fetched:", movies);
       if (!movies) {
-        res.status(404).send("No se encontraron peliculas");
+        console.log("No movies found.");
+        return res.status(404).send("No se encontraron películas");
       }
-
-      res.status(200).json(movies);
-
+      console.log("Returning movies...");
+      return res.status(200).json(movies);
     } catch (error) {
-      console.log(error);
+      console.error("Error fetching movies:", error);
       return res.status(500).send("Error al obtener las películas");
     }
   },
-
-
+  
   postMovie: async (req, res) => {
     try {
       const { title, year, director, duration, genre, rate, poster } = req.body;
